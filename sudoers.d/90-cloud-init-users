@@ -1,0 +1,4 @@
+# Created by cloud-init v. 22.4.2-0ubuntu0~20.04.2 on Mon, 30 Jan 2023 16:53:53 +0000
+
+# User rules for elf1
+elf1 ALL=(ALL) NOPASSWD:ALL
