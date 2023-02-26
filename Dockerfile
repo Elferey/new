@@ -26,7 +26,8 @@ RUN add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubunt
 RUN apt-get update
 RUN apt-get -y install docker-ce
 
-
+RUN useradd -m -d /var/lib/jenkins jenkins \
+    usermod -aG docker jenkins
 #RUN mkdir -p /.docker/buildx/instances \
 #    mkdir -p /.docker/buildx/defaults \
 #    mkdir -p /.docker/buildx/activity
