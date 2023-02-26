@@ -1,4 +1,4 @@
-FROM openjdk:latest
+FROM openjdk:8u151-stretch
 
 # Install pacakges
 RUN apt-get update
