@@ -26,7 +26,7 @@ RUN add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubunt
 RUN apt-get update
 RUN apt-get -y install docker-ce
 
-RUN docker run -v /var/run/docker.sock:/var/run/docker.sock --privileged=true -ti docker
+RUN docker run -v /var/run/docker.sock:/var/run/docker.sock --privileged=true -i docker
 #RUN mkdir -p /.docker/buildx/instances \
 #    mkdir -p /.docker/buildx/defaults \
 #    mkdir -p /.docker/buildx/activity
