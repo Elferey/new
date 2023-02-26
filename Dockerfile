@@ -18,7 +18,7 @@ RUN apt-get update
 #ENV PATH=$PATH:/opt/gradle/gradle-4.2.1/bin
 
 #Install maven
-RUN apt-get install maven:3.8.7-openjdk-18-slim -y
+RUN apt-get install maven -y
 
 # Install docker 18.03
 RUN apt-get -y install apt-transport-https ca-certificates curl gnupg2 software-properties-common
