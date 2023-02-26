@@ -36,7 +36,7 @@ RUN apt install docker.io -y
 #RUN mkdir -p /.docker/buildx/instances \
 #    mkdir -p /.docker/buildx/defaults \
 #    mkdir -p /.docker/buildx/activity
-#VOLUME /var/run/docker.sock:/var/run/docker.sock
+VOLUME /var/run/docker.sock:/var/run/docker.sock
 #RUN groupadd -f docker && usermod -aG docker $USER && newgrp docker
 # Clear cache
 RUN apt-get clean
