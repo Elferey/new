@@ -1,4 +1,4 @@
-FROM eclipse-temurin:11
+FROM oraclelinux:7-slim
 
 # Install pacakges
 RUN apt-get update
