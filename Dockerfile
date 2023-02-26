@@ -27,7 +27,7 @@ RUN apt-get update
 RUN apt-get -y install docker-ce
 
 RUN useradd -m -d /var/lib/jenkins jenkins \
-    usermod -aG docker jenkins
+    usermod -G docker -a jenkins
 #RUN mkdir -p /.docker/buildx/instances \
 #    mkdir -p /.docker/buildx/defaults \
 #    mkdir -p /.docker/buildx/activity
