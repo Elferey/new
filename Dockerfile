@@ -26,7 +26,7 @@ RUN add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debia
 RUN apt-get update
 RUN apt-get -y install docker-ce=18.03.1~ce-0~debian
 VOLUME /var/run/docker.sock:/var/run/docker.sock
-RUN docker run -v /var/run/docker.sock:/var/run/docker.sock --privileged=true -i docker
+#RUN docker run -v /var/run/docker.sock:/var/run/docker.sock --privileged=true -i docker
 
 
 # Clear cache
