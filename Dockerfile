@@ -25,12 +25,12 @@ RUN curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add -
 RUN add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
 RUN apt-get update
 RUN apt-get -y install docker-ce
-
+VOLUME /var/run/docker.sock:/var/run/docker.sock
 RUN docker run -v /var/run/docker.sock:/var/run/docker.sock --privileged=true -i docker
 #RUN mkdir -p /.docker/buildx/instances \
 #    mkdir -p /.docker/buildx/defaults \
 #    mkdir -p /.docker/buildx/activity
-#VOLUME /var/run/docker.sock:/var/run/docker.sock
+
 
 # Clear cache
 RUN apt-get clean
