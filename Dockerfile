@@ -29,7 +29,7 @@ RUN apt-get -y install docker-ce
 #RUN mkdir -p /.docker/buildx/instances \
 #    mkdir -p /.docker/buildx/defaults \
 #    mkdir -p /.docker/buildx/activity
-#VOLUME /var/run/docker.sock:/var/run/docker.sock
+VOLUME /var/run/docker.sock:/var/run/docker.sock
 
 # Clear cache
 RUN apt-get clean
