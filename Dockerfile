@@ -1,4 +1,4 @@
-FROM oraclelinux:7-slim
+FROM openjdk:latest
 
 # Install pacakges
 RUN apt-get update
