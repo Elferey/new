@@ -28,6 +28,6 @@ RUN apt-cache policy docker-ce
 RUN apt-get update
 RUN apt -y install docker-ce
 RUN whoami
-#RUN groupadd -f docker && usermod -aG docker $USER && newgrp docker
+RUN groupadd -f docker && usermod -aG docker $USER && newgrp docker
 # Clear cache
 RUN apt-get clean
