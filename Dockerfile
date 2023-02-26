@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM openjdk:8u151-stretch
 
 # Install pacakges
 RUN apt-get update
@@ -22,14 +22,11 @@ RUN apt install maven -y
 # Install docker 18.03
 RUN apt-get -y install apt-transport-https ca-certificates curl gnupg2 software-properties-common
 RUN curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add -
-RUN add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
+RUN add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable"
 RUN apt-get update
-RUN apt-get -y install docker-ce
+RUN apt-get -y install docker-ce=18.03.1~ce-0~debian
 VOLUME /var/run/docker.sock:/var/run/docker.sock
-RUN docker run -v /var/run/docker.sock.raw:/var/run/docker.sock --privileged=true -i docker
-#RUN mkdir -p /.docker/buildx/instances \
-#    mkdir -p /.docker/buildx/defaults \
-#    mkdir -p /.docker/buildx/activity
+RUN docker run -v /var/run/docker.sock:/var/run/docker.sock --privileged=true -i docker
 
 
 # Clear cache
