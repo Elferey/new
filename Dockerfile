@@ -1,4 +1,4 @@
-FROM openjdk:8u151-stretch
+FROM ubuntu:18.04
 
 # Install pacakges
 RUN apt-get update
