@@ -27,7 +27,7 @@ RUN add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubunt
 RUN apt-cache policy docker-ce
 RUN apt-get update
 RUN apt -y install docker-ce
-RUN mkdir -p /.docker/buildx/instances
+RUN mkdir -p /.docker/buildx/instances && mkdir -p /.docker/buildx/defaults
 #RUN groupadd -f docker && usermod -aG docker $USER && newgrp docker
 # Clear cache
 RUN apt-get clean
