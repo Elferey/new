@@ -5,7 +5,7 @@ RUN apt-get update
 
 # Install ssh
 RUN apt-get -y install openssh-client
-
+RUN pwd && ls -l
 # Confugure ssh client
 COPY id_rsa /root/.ssh/id_rsa
 RUN chmod 600 /root/.ssh/id_rsa
